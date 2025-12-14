@@ -22,7 +22,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install  # <--- HIER ZIT DE WIJZIGING (was npm ci)
 
       - name: Build
         run: npm run build
