@@ -7,14 +7,6 @@ import { COLORS, SIZES, Bundle } from './types';
 
 // --- Data ---
 
-// NOTE: Image mapping based on user files in images/ folder.
-// 1.png = Hero
-// 2.png = Lifestyle / Dream Outcome
-// 3.png = Bundle 1
-// 4.jpg = Bundle 2 (JPG)
-// 5.png = Bundle 3
-// 6-12.png, 13-14.jpg = Gallery Loop
-
 const bundles: Bundle[] = [
   {
     id: 'starter',
@@ -23,7 +15,7 @@ const bundles: Bundle[] = [
     includes: ['1 ColdBoxers boxer brief', '1 cooling pad'],
     price: 39,
     cta: 'Get Starter',
-    image: 'images/3.png' 
+    image: 'images/3 medium.png'
   },
   {
     id: 'sauna-set',
@@ -33,7 +25,7 @@ const bundles: Bundle[] = [
     price: 100,
     badge: 'Most Popular',
     cta: 'Get the 3 Pack',
-    image: 'images/4.jpg'
+    image: 'images/4 medium.png'
   },
   {
     id: 'rotation',
@@ -43,13 +35,20 @@ const bundles: Bundle[] = [
     price: 155,
     badge: 'Best Value',
     cta: 'Get the 5 Pack',
-    image: 'images/5.png'
+    image: 'images/5 medium.png'
   }
 ];
 
 const galleryImages = [
-  'images/6.png', 'images/7.png', 'images/8.png', 'images/9.png', 'images/10.png',
-  'images/11.png', 'images/12.png', 'images/13.jpg', 'images/14.jpg'
+  'images/6 medium.png', 
+  'images/7 medium.png', 
+  'images/8 medium.png', 
+  'images/9 medium.png', 
+  'images/10 medium.png',
+  'images/11 medium.png', 
+  'images/12 medium.png', 
+  'images/13 medium.png',
+  'images/14 medium.png'
 ];
 
 const faqs = [
@@ -115,6 +114,10 @@ const ParallaxImage = ({ src, alt, offset = 50 }: { src: string, alt: string, of
         alt={alt} 
         className="w-full h-full object-cover transition-opacity duration-500 opacity-90 group-hover:opacity-100" 
         loading="lazy"
+        onError={(e) => {
+          // Fallback if image fails to load
+          e.currentTarget.style.opacity = '0.5';
+        }}
       />
       <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
     </div>
@@ -236,7 +239,7 @@ function App() {
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
                 <div className="absolute inset-0 bg-gradient-to-tr from-ice-500/20 to-transparent mix-blend-overlay z-10" />
                 <img 
-                  src="images/1.png" 
+                  src="images/1 medium.png" 
                   alt="ColdBoxers Hero" 
                   className="w-full h-full object-cover"
                 />
@@ -295,7 +298,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
           <div className="h-[600px] w-full">
              <ParallaxImage 
-               src="images/2.png" 
+               src="images/2 medium.png" 
                alt="Lifestyle Sauna" 
                offset={80}
              />
