@@ -15,7 +15,7 @@ const bundles: Bundle[] = [
     includes: ['1 ColdBoxers boxer brief', '1 cooling pad'],
     price: 39,
     cta: 'Get Starter',
-    image: 'images/3 medium.png'
+    image: 'images/3 Medium.png' // Aangepast naar Hoofdletter M
   },
   {
     id: 'sauna-set',
@@ -25,7 +25,7 @@ const bundles: Bundle[] = [
     price: 100,
     badge: 'Most Popular',
     cta: 'Get the 3 Pack',
-    image: 'images/4 medium.png'
+    image: 'images/4 Medium.png' // Aangepast naar Hoofdletter M
   },
   {
     id: 'rotation',
@@ -35,20 +35,21 @@ const bundles: Bundle[] = [
     price: 155,
     badge: 'Best Value',
     cta: 'Get the 5 Pack',
-    image: 'images/5 medium.png'
+    image: 'images/5 Medium.png' // Aangepast naar Hoofdletter M
   }
 ];
 
+// Alle bestandsnamen hieronder aangepast naar Hoofdletter M
 const galleryImages = [
-  'images/6 medium.png', 
-  'images/7 medium.png', 
-  'images/8 medium.png', 
-  'images/9 medium.png', 
-  'images/10 medium.png',
-  'images/11 medium.png', 
-  'images/12 medium.png', 
-  'images/13 medium.png',
-  'images/14 medium.png'
+  'images/6 Medium.png', 
+  'images/7 Medium.png', 
+  'images/8 Medium.png', 
+  'images/9 Medium.png', 
+  'images/10 Medium.png',
+  'images/11 Medium.png', 
+  'images/12 Medium.png', 
+  'images/13 Medium.png',
+  'images/14 Medium.png'
 ];
 
 const faqs = [
@@ -238,8 +239,9 @@ function App() {
             >
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
                 <div className="absolute inset-0 bg-gradient-to-tr from-ice-500/20 to-transparent mix-blend-overlay z-10" />
+                {/* Aangepast naar Hoofdletter M */}
                 <img 
-                  src="images/1 medium.png" 
+                  src="images/1 Medium.png" 
                   alt="ColdBoxers Hero" 
                   className="w-full h-full object-cover"
                 />
@@ -297,8 +299,9 @@ function App() {
       <section className="py-32 bg-onyx border-y border-white/5">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
           <div className="h-[600px] w-full">
+             {/* Aangepast naar Hoofdletter M */}
              <ParallaxImage 
-               src="images/2 medium.png" 
+               src="images/2 Medium.png" 
                alt="Lifestyle Sauna" 
                offset={80}
              />
